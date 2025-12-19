@@ -618,82 +618,133 @@ body {
     flex-direction: column;
   }
 }
-/* =======================
-   FOOTER - ÍCONES E LINKS (NOVO)
-======================= */
+/* ===========================
+   FOOTER
+=========================== */
 
-/* Linha com ícone + texto (local e telefone) */
-.footer-contact .contact-location,
-.footer-contact .contact-phone {
+.site-footer{
+  background: #0f2f1e;
+  color: #e6efe9;
+  padding-top: 60px;
+}
+
+.footer-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.footer-brand{
+  max-width: 320px;
+}
+
+.footer-logo-img{
+  max-width: 180px;
+  margin-bottom: 16px;
+}
+
+.footer-text{
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: .9;
+}
+
+.footer-col h4{
+  font-size: 16px;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.footer-links,
+.footer-contact{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li{
+  margin-bottom: 10px;
+}
+
+.footer-links a{
+  color: #cfe3d8;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.footer-links a:hover{
+  color: #ffffff;
+}
+
+/* CONTATO */
+.contact-item{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
+  margin-bottom: 12px;
+  font-size: 14px;
 }
 
-/* Botão/ícone clicável (Whats e Maps) */
-.footer-contact .wpp-icon,
-.footer-contact .map-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
+.contact-item a{
+  color: #cfe3d8;
   text-decoration: none;
-  transition: transform 0.15s ease, background 0.15s ease, opacity 0.15s ease;
 }
 
-/* Hover dos ícones */
-.footer-contact .wpp-icon:hover,
-.footer-contact .map-icon:hover {
-  transform: translateY(-1px);
-  opacity: 0.95;
-  background: rgba(255, 255, 255, 0.08);
+.contact-item a:hover{
+  color: #ffffff;
 }
 
-/* Tamanho padrão dos SVG */
-.footer-contact .wpp-ico svg,
-.footer-contact .map-ico svg {
-  width: 18px;
-  height: 18px;
+.contact-icon{
+  font-size: 16px;
 }
 
-/* Cor do WhatsApp */
-.footer-contact .wpp-ico svg {
-  fill: #25D366;
+/* BARRA FINAL */
+.footer-bottom{
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,.1);
 }
 
-/* Cor do ícone de localização (combina com VALE-X) */
-.footer-contact .map-ico svg {
-  fill: #c4cf6a;
+.footer-bottom-content{
+  padding: 16px 0;
+  font-size: 13px;
+  text-align: center;
+  opacity: .85;
 }
 
-/* Link do número (liga) e link do endereço (abre mapa) */
-.footer-contact .tel-link,
-.footer-contact .map-link {
-  color: inherit;
-  text-decoration: none;
-  padding: 6px 10px;
-  border-radius: 10px;
-  transition: background 0.15s ease;
+/* ===========================
+   WHATSAPP FLUTUANTE
+=========================== */
+
+.whatsapp-float{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+  z-index: 9999;
+  transition: transform .15s ease, filter .15s ease;
 }
 
-/* Hover do texto clicável */
-.footer-contact .tel-link:hover,
-.footer-contact .map-link:hover {
-  background: rgba(255, 255, 255, 0.08);
+.whatsapp-float:hover{
+  transform: translateY(-2px);
+  filter: brightness(1.05);
 }
-  .footer-contact .wpp-icon,
-  .footer-contact .map-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
+
+.whatsapp-float svg{
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+
+@media (max-width: 480px){
+  .whatsapp-float{
+    right: 14px;
+    bottom: 14px;
   }
-
-  .footer-contact .tel-link,
-  .footer-contact .map-link {
-    padding: 10px 10px;
-  }
-.footer-contact .wpp-icon:hover {
-  background: #1ebe5d;
 }
