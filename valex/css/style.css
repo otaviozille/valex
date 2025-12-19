@@ -694,3 +694,10 @@ body {
   .footer-contact .map-link {
     padding: 10px 10px;
   }
+.footer-contact .wpp-icon {
+  background: #25D366;   /* fundo verde */
+}
+
+.footer-contact .wpp-ico svg {
+  fill: #ffffff;         /* ícone branco */
+}
