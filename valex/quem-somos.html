@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quem somos | VALE-X Florestal</title>
+
+  <link rel="icon" type="image/png" href="./img/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-content">
+    <div class="logo">
+      <img src="./img/valexlogo.png" class="logo-img" alt="VALE-X">
+      <div class="logo-text">
+        <span class="logo-title">VALE-X FLORESTAL</span>
+        <span class="logo-subtitle">Madeira Imunizada • Comércio e Transporte</span>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html#inicio">Início</a></li>
+        <li><a href="quem-somos.html">Quem somos</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="index.html#orcamentos">Orçamentos</a></li>
+        <li><a href="tratamento.html">O tratamento</a></li>
+        <li><a href="index.html#contato">Contatos</a></li>
+      </ul>
+    </nav>
+
+    <button class="menu-toggle">☰</button>
+  </div>
+</header>
+
+<section class="section section-light">
+  <div class="container section-header-center">
+    <h1>Quem somos</h1>
+    <p>Conheça a história, a política de qualidade e os valores da VALE-X Florestal.</p>
+  </div>
+
+  <div class="container section-grid">
+    <div>
+      <h2>A Vale-X Florestal</h2>
+      <p>
+        A Vale-x Florestal é uma empresa que surgiu em 2010 para realizar tratamento
+        e imunização de madeira.
+      </p>
+
+      <h2 style="margin-top:1.5rem;">Política de qualidade</h2>
+      <p>
+        A Vale-X Florestal segue os seguintes princípios em busca da qualidade contínua
+        dos seus produtos:
+      </p>
+      <ol style="padding-left:1.2rem; margin-top:.5rem;">
+        <li>
+          Primar pela qualidade dos produtos, levando em consideração as características
+          da sua origem e da sua aplicabilidade após a venda, usando os recursos técnicos
+          adequados e de formas sustentável;
+        </li>
+        <li>
+          Atender as normas de qualidade estabelecidas pela Associação Brasileira de Normas
+          Técnicas (ABNT);
+        </li>
+        <li>
+          Investir na capacitação e treinamento dos funcionários e colaboradores, garantindo
+          o aperfeiçoamento técnico constante da nossa equipe;
+        </li>
+        <li>
+          Primar pela qualidade do atendimento ao cliente;
+        </li>
+        <li>
+          Os negócios realizados pela empresa serão pautados na ética e transparência,
+          assegurando a integridade com os nossos clientes, trabalhadores e parceiros.
+        </li>
+      </ol>
+    </div>
+
+    <div class="cards-column">
+      <div class="info-card">
+        <h3>Missão</h3>
+        <p>
+          Tratar e vender madeira, com qualidade e de forma ecologicamente correta, com foco
+          na satisfação do cliente e bem estar dos nossos colaboradores.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>Visão</h3>
+        <p>
+          Ser uma empresa reconhecida no mercado pelo bom trabalho e responsabilidade ambiental,
+          consolidando a qualidade dos produtos da marca VALE-X.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>Valores</h3>
+        <ul>
+          <li>Profissionalismo</li>
+          <li>Integridade</li>
+          <li>Compromisso</li>
+          <li>Respeito</li>
+          <li>Transparência</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="logo footer-logo">
+        <img src="./img/valexlogo.png" class="logo-img" alt="VALE-X">
+      </div>
+      <p class="footer-text">Madeira tratada com qualidade e responsabilidade.</p>
+    </div>
+
+    <div>
+      <h4>Menu rápido</h4>
+      <ul class="footer-links">
+        <li><a href="index.html#inicio">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Contato</h4>
+      <ul class="footer-contact">
+        <li>MG - Brasil</li>
+        <li>(31) 9 9690-7091</li>
+        <li>(31) 9 9733-7470</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-content">
+      <span>© <span id="ano-atual"></span> VALE-X FLORESTAL.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const spanAno = document.getElementById('ano-atual');
+  if (spanAno) spanAno.textContent = new Date().getFullYear();
+
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.main-nav ul');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => nav.classList.toggle('nav-open'));
+  }
+</script>
+
+</body>
+</html>

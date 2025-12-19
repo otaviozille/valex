@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produtos | VALE-X Florestal</title>
+
+  <link rel="icon" type="image/png" href="./img/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-content">
+    <div class="logo">
+      <img src="./img/valexlogo.png" class="logo-img" alt="VALE-X">
+      <div class="logo-text">
+        <span class="logo-title">VALE-X FLORESTAL</span>
+        <span class="logo-subtitle">Madeira Imunizada • Comércio e Transporte</span>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html#inicio">Início</a></li>
+        <li><a href="quem-somos.html">Quem somos</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="index.html#orcamentos">Orçamentos</a></li>
+        <li><a href="tratamento.html">O tratamento</a></li>
+        <li><a href="index.html#contato">Contatos</a></li>
+      </ul>
+    </nav>
+
+    <button class="menu-toggle">☰</button>
+  </div>
+</header>
+
+<section class="section section-light">
+  <div class="container section-header-center">
+    <h1>Produtos</h1>
+    <p>O melhor em eucalipto tratado e madeira imunizada para diversas aplicações.</p>
+  </div>
+
+  <div class="container">
+    <h2>O melhor em eucalipto tratado</h2>
+
+    <h3 style="margin-top:1.2rem;">Madeira tratada</h3>
+    <p>
+      A madeira tratada fica com uma cor levemente esverdeada, sua superfície fica livre de
+      resíduos, com alta resistência, atóxica, inodora, podendo ser utilizada ao natural
+      ou com qualquer tipo de acabamento posterior como cêras, vernizes, pinturas, sempre
+      mantendo toda sua nobreza, versatilidade, economia e beleza.
+    </p>
+
+    <h3 style="margin-top:1.2rem;">Eucalipto</h3>
+    <p>
+      O Eucalipto é um recurso natural renovável. Tratado, é a solução moderna, econômica
+      e correta de substituir com vantagens as madeiras nativas, diminuindo a pressão sobre
+      as nossas florestas e reservas naturais.
+    </p>
+
+    <h3 style="margin-top:1.5rem;">Madeira para construção civil, rural, móveis, brinquedos e etc.</h3>
+    <ul style="margin-top:.5rem; padding-left:1.1rem;">
+      <li>Mourões para cercas, fruticultura, etc;</li>
+      <li>Construção civil, ripas, caibros, etc;</li>
+      <li>Esteios para curral e outras finalidades;</li>
+      <li>Postes para iluminação e telefonia;</li>
+      <li>Brinquedos e parques infantis;</li>
+      <li>Peças para galpões, quiosques, etc.</li>
+    </ul>
+
+    <p style="margin-top:1.5rem;">
+      A VALEX tem em seu estoque o que há de melhor em madeira tratada para construção civil,
+      rural, playground e muito mais.
+    </p>
+
+    <p style="margin-top:2rem;">
+      Para consultar bitolas, comprimentos e montar seu orçamento, utilize nosso
+      <a href="index.html#orcamentos">orçamento online</a> ou entre em contato com nossa equipe.
+    </p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="logo footer-logo">
+        <img src="./img/valexlogo.png" class="logo-img" alt="VALE-X">
+      </div>
+      <p class="footer-text">Madeira tratada com qualidade e responsabilidade.</p>
+    </div>
+
+    <div>
+      <h4>Menu rápido</h4>
+      <ul class="footer-links">
+        <li><a href="index.html#inicio">Início</a></li>
+        <li><a href="quem-somos.html">Quem somos</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Contato</h4>
+      <ul class="footer-contact">
+        <li>MG - Brasil</li>
+        <li>(31) 9 9690-7091</li>
+        <li>(31) 9 9733-7470</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-content">
+      <span>© <span id="ano-atual"></span> VALE-X FLORESTAL.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const spanAno = document.getElementById('ano-atual');
+  if (spanAno) spanAno.textContent = new Date().getFullYear();
+
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.main-nav ul');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => nav.classList.toggle('nav-open'));
+  }
+</script>
+
+</body>
+</html>

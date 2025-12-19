@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O tratamento da madeira | VALE-X Florestal</title>
+
+  <link rel="icon" type="image/png" href="./img/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-content">
+    <div class="logo">
+      <img src="./img/valexlogo.png" class="logo-img" alt="VALE-X">
+      <div class="logo-text">
+        <span class="logo-title">VALE-X FLORESTAL</span>
+        <span class="logo-subtitle">Madeira Imunizada • Comércio e Transporte</span>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html#inicio">Início</a></li>
+        <li><a href="quem-somos.html">Quem somos</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="index.html#orcamentos">Orçamentos</a></li>
+        <li><a href="tratamento.html">O tratamento</a></li>
+        <li><a href="index.html#contato">Contatos</a></li>
+      </ul>
+    </nav>
+
+    <button class="menu-toggle">☰</button>
+  </div>
+</header>
+
+<section class="section section-light">
+  <div class="container section-header-center">
+    <h1>O tratamento da madeira</h1>
+    <p>Entenda como funciona o processo de imunização realizado pela VALE-X Florestal.</p>
+  </div>
+
+  <div class="container section-grid">
+    <div>
+      <h2>Processo de imunização</h2>
+      <p>
+        O processo de imunização, também chamado de preservação, tem como objetivo proteger
+        a madeira da ação de agentes químicos, físicos e biológicos. Visa proteger a madeira
+        do ataque de cupins, fungos, umidade e outros agentes.
+      </p>
+      <p>
+        A madeira em toras é enviada para a usina de preservação, após um período de secagem
+        de 2 a 4 meses, controlada ao ar livre. Esta madeira é então classificada, cortada,
+        descascada e estaleirada no pátio da usina.
+      </p>
+      <p>
+        Em seguida, a madeira é carregada em vagonetas e estas vagonetas entram em uma autoclave,
+        onde será desenvolvido o processo de imunização.
+      </p>
+
+      <h3 style="margin-top:1.2rem;">Etapas do processo</h3>
+      <ol style="padding-left:1.2rem; margin-top:.5rem;">
+        <li>A autoclave é carregada com a madeira.</li>
+        <li>O vácuo inicial retira a maior parte do ar e da umidade das células da madeira.</li>
+        <li>O líquido imunizante é transferido do tanque para a autoclave.</li>
+        <li>Sob pressão, o líquido imunizante penetra nas células da madeira.</li>
+        <li>O líquido imunizante é novamente transferido para o tanque.</li>
+        <li>O vácuo final retira o excesso de produto da superfície da madeira.</li>
+      </ol>
+    </div>
+
+    <div class="cards-column">
+      <div class="info-card">
+        <h3>Vídeo do processo</h3>
+        <p>Assista ao vídeo explicativo sobre o tratamento da madeira:</p>
+        <div class="map-embed" style="margin-top:.5rem;">
+          <iframe
+            width="100%"
+            height="260"
+            src="https://www.youtube.com/embed/PcmVtesUQEE"
+            title="Processo de imunização da madeira"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>Benefícios do tratamento</h3>
+        <ul>
+          <li>Aumento significativo da vida útil da madeira</li>
+          <li>Proteção contra cupins e fungos</li>
+          <li>Maior resistência em ambientes úmidos</li>
+          <li>Segurança e desempenho para aplicações rurais e urbanas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="logo footer-logo">
+        <img src="./img/valexlogo.png" class="logo-img" alt="VALE-X">
+      </div>
+      <p class="footer-text">Madeira tratada com qualidade e responsabilidade.</p>
+    </div>
+
+    <div>
+      <h4>Menu rápido</h4>
+      <ul class="footer-links">
+        <li><a href="index.html#inicio">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Contato</h4>
+      <ul class="footer-contact">
+        <li>MG - Brasil</li>
+        <li>(31) 9 9690-7091</li>
+        <li>(31) 9 9733-7470</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-content">
+      <span>© <span id="ano-atual"></span> VALE-X FLORESTAL.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const spanAno = document.getElementById('ano-atual');
+  if (spanAno) spanAno.textContent = new Date().getFullYear();
+
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.main-nav ul');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => nav.classList.toggle('nav-open'));
+  }
+</script>
+
+</body>
+</html>
