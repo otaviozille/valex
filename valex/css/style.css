@@ -618,3 +618,79 @@ body {
     flex-direction: column;
   }
 }
+/* =======================
+   FOOTER - ÍCONES E LINKS (NOVO)
+======================= */
+
+/* Linha com ícone + texto (local e telefone) */
+.footer-contact .contact-location,
+.footer-contact .contact-phone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Botão/ícone clicável (Whats e Maps) */
+.footer-contact .wpp-icon,
+.footer-contact .map-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease, opacity 0.15s ease;
+}
+
+/* Hover dos ícones */
+.footer-contact .wpp-icon:hover,
+.footer-contact .map-icon:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Tamanho padrão dos SVG */
+.footer-contact .wpp-ico svg,
+.footer-contact .map-ico svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Cor do WhatsApp */
+.footer-contact .wpp-ico svg {
+  fill: #25D366;
+}
+
+/* Cor do ícone de localização (combina com VALE-X) */
+.footer-contact .map-ico svg {
+  fill: #c4cf6a;
+}
+
+/* Link do número (liga) e link do endereço (abre mapa) */
+.footer-contact .tel-link,
+.footer-contact .map-link {
+  color: inherit;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 10px;
+  transition: background 0.15s ease;
+}
+
+/* Hover do texto clicável */
+.footer-contact .tel-link:hover,
+.footer-contact .map-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+  .footer-contact .wpp-icon,
+  .footer-contact .map-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  .footer-contact .tel-link,
+  .footer-contact .map-link {
+    padding: 10px 10px;
+  }
