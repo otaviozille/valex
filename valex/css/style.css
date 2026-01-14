@@ -695,66 +695,60 @@ body {
     padding: 10px 10px;
   }
 
-
 /* =======================
-   MODAL CERTIFICAÇÃO (PDF)
+   MODAL CERTIFICAÇÃO
 ======================= */
-.modal-cert {
+.modal-cert{
   position: fixed;
   inset: 0;
   display: none;
   z-index: 9999;
 }
 
-.modal-cert.active {
+.modal-cert.active{
   display: block;
 }
 
-.modal-cert-overlay {
+.modal-cert-overlay{
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0,0,0,.65);
 }
 
-.modal-cert-content {
+.modal-cert-content{
   position: relative;
   width: min(1100px, 94vw);
   height: min(85vh, 760px);
   margin: 5vh auto;
   background: #fffdf7;
   border-radius: 1rem;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 25px 60px rgba(0,0,0,.35);
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-.modal-cert-header {
+.modal-cert-header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0.8rem;
+  gap: .8rem;
   padding: 1rem 1.2rem;
   background: linear-gradient(90deg,#56622b,#39451c);
   color: #fff;
 }
 
-.modal-cert-header h3 {
-  margin: 0;
-  font-size: 1rem;
-}
-
-.modal-cert-actions {
+.modal-cert-actions{
   display: flex;
-  gap: 0.6rem;
+  gap: .6rem;
   align-items: center;
 }
 
-.modal-close {
+.modal-close{
   background: transparent;
   border: 2px solid #fff;
   color: #fff;
-  border-radius: 0.6rem;
+  border-radius: .6rem;
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -762,17 +756,69 @@ body {
   line-height: 1;
 }
 
-.modal-cert-frame {
-  width: 100%;
-  height: 100%;
-  border: none;
+/* =======================
+   CONTEÚDO (FORMATO NOTÍCIA)
+======================= */
+.cert-content{
+  padding: 1.2rem;
+  overflow: auto;
+  /* desconta a altura do header do modal (aprox.) */
+  max-height: calc(min(85vh, 760px) - 64px);
 }
 
-/* Ajuste no celular */
-@media (max-width: 520px) {
-  .modal-cert-content {
-    width: 94vw;
-    height: 88vh;
-    margin: 4vh auto;
-  }
+.cert-lead{
+  font-size: 1.02rem;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+  color: #2b2118;
+}
+
+.cert-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.cert-card{
+  background: #fff8ef;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: .8rem;
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,.05);
+}
+
+.cert-card h4{
+  margin: 0 0 .6rem 0;
+  font-size: 1.05rem;
+  color: #2b2118;
+}
+
+.cert-card p{
+  margin: 0 0 .6rem 0;
+  line-height: 1.65;
+}
+
+.cert-card ul,
+.cert-card ol{
+  margin: .4rem 0 0 1.2rem;
+  line-height: 1.65;
+}
+
+.cert-card li{
+  margin-bottom: .35rem;
+}
+
+.cert-footer-note{
+  margin-top: 1rem;
+  padding: .9rem 1rem;
+  border-left: 5px solid #c4cf6a;
+  background: rgba(196,207,106,.18);
+  border-radius: .8rem;
+  line-height: 1.6;
+}
+
+/* Responsivo */
+@media (max-width: 900px){
+  .cert-grid{ grid-template-columns: 1fr; }
+  .cert-content{ padding: 1rem; }
 }
