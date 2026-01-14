@@ -73,19 +73,17 @@
         </li>
       </ol>
 
-      <!-- CERTIFICAÇÃO (ABNT / PROMAT) -->
+      <!-- CERTIFICAÇÃO (NOVO) -->
       <div class="info-card" style="margin-top:1.5rem;">
-        <h3>Certificação de Qualidade</h3>
+        <h3>Certificação ABNT / PROMAT</h3>
         <p>
-          A VALE-X Florestal segue rigorosamente as normas da <strong>ABNT</strong> e é certificada pelo
-          programa <strong>PROMAT</strong>, reforçando nosso compromisso com qualidade, durabilidade e segurança
-          na madeira tratada.
+          Entenda de forma simples o que a certificação representa e quais benefícios ela traz
+          para o cliente e para a qualidade da madeira tratada.
         </p>
         <button class="btn btn-primary" id="abrirCertificacao" type="button">
-          Ver certificação ABNT / PROMAT
+          Ver informações da certificação
         </button>
       </div>
-
     </div>
 
     <div class="cards-column">
@@ -154,7 +152,7 @@
   </div>
 </footer>
 
-<!-- MODAL CERTIFICAÇÃO -->
+<!-- MODAL CERTIFICAÇÃO (SEM PDF) -->
 <div class="modal-cert" id="modalCertificacao" aria-hidden="true">
   <div class="modal-cert-overlay" id="overlayCertificacao"></div>
 
@@ -163,26 +161,90 @@
       <h3>Certificação ABNT / PROMAT</h3>
 
       <div class="modal-cert-actions">
-        <a class="btn btn-secondary" href="pdf/certificacao-abnt-promat.pdf" target="_blank" rel="noopener">
-          Abrir em nova aba
+        <!-- Se quiser manter o PDF como download opcional, descomente e ajuste o caminho:
+        <a class="btn btn-secondary" href="./pdf/certificacao-abnt-promat.pdf" target="_blank" rel="noopener">
+          Baixar PDF
         </a>
-
+        -->
         <button class="modal-close" id="fecharCertificacao" type="button" aria-label="Fechar">✕</button>
       </div>
     </div>
 
-    <iframe
-      src="pdf/certificacao-abnt-promat.pdf"
-      title="Certificação ABNT / PROMAT"
-      class="modal-cert-frame"
-    ></iframe>
+    <!-- Conteúdo em HTML (estilo informativo / notícia) -->
+    <div class="cert-content">
+      <p class="cert-lead">
+        A certificação <strong>ABNT/PROMAT</strong> é um reconhecimento de qualidade que reforça o compromisso
+        com padrões técnicos no tratamento da madeira, trazendo mais segurança e confiança para o cliente.
+      </p>
+
+      <div class="cert-grid">
+        <section class="cert-card">
+          <h4>Quem é a PROMAT</h4>
+          <p>
+            A PROMAT (Associação das Empresas Produtoras de Madeira Tratada) atua no fortalecimento do setor,
+            promovendo boas práticas, padronização e melhorias contínuas.
+          </p>
+        </section>
+
+        <section class="cert-card">
+          <h4>O que a certificação garante</h4>
+          <ul>
+            <li>Conformidade com normas técnicas brasileiras (ABNT)</li>
+            <li>Processos padronizados e controle de qualidade</li>
+            <li>Maior durabilidade e desempenho do produto</li>
+            <li>Auditorias e acompanhamento periódico</li>
+          </ul>
+        </section>
+
+        <section class="cert-card">
+          <h4>Por que isso importa na prática</h4>
+          <ul>
+            <li><strong>Mais confiança</strong> na compra e na especificação do produto</li>
+            <li><strong>Menos risco</strong> de problemas por não conformidade</li>
+            <li><strong>Melhor performance</strong> em aplicações rurais e urbanas</li>
+            <li><strong>Valorização</strong> do investimento em madeira tratada</li>
+          </ul>
+        </section>
+
+        <section class="cert-card">
+          <h4>Controle e melhoria contínua</h4>
+          <p>
+            A certificação incentiva boas práticas, capacitação e padronização operacional,
+            garantindo consistência de qualidade ao longo do tempo.
+          </p>
+        </section>
+
+        <section class="cert-card">
+          <h4>Conformidade e credibilidade</h4>
+          <p>
+            Para clientes e projetos mais exigentes, certificação significa credibilidade,
+            atendimento a requisitos técnicos e transparência.
+          </p>
+        </section>
+
+        <section class="cert-card">
+          <h4>Resumo</h4>
+          <p>
+            Mais do que um selo, a certificação ABNT/PROMAT representa compromisso com qualidade,
+            segurança e confiança em madeira tratada.
+          </p>
+        </section>
+      </div>
+
+      <div class="cert-footer-note">
+        <strong>Dica:</strong> se quiser, podemos transformar isso numa página “Informativos” igual o site antigo,
+        com cards e “Leia mais”, para ficar ainda mais profissional e fácil de navegar.
+      </div>
+    </div>
   </div>
 </div>
 
 <script>
+  // Ano rodapé
   const spanAno = document.getElementById('ano-atual');
   if (spanAno) spanAno.textContent = new Date().getFullYear();
 
+  // Menu mobile
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.main-nav ul');
   if (toggle && nav) {
