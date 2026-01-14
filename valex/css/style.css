@@ -34,7 +34,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: linear-gradient(90deg, #56622b, #39451c);
+  /* gradiente mais elegante + sombra suave */
+  background: linear-gradient(90deg,#56622b,#39451c);
   padding: 0.55rem 0;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
@@ -46,7 +47,7 @@ body {
   gap: 1.5rem;
 }
 
-/* Logo */
+/* Bloco da logo */
 .logo {
   display: flex;
   align-items: center;
@@ -54,13 +55,30 @@ body {
 }
 
 .logo-img {
-  height: 110px;
+  height: 110px;              /* um pouco menor pra harmonizar */
   width: auto;
 }
 
-/* =======================
-   NAV
-======================= */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+}
+
+.logo-subtitle {
+  font-size: 0.8rem;
+  color: #e7f0c5;
+  opacity: 0.95;
+}
+
+/* NAV */
 .main-nav ul {
   display: flex;
   gap: 1.4rem;
@@ -78,13 +96,14 @@ body {
   position: relative;
 }
 
+/* sublinhado suave ao passar o mouse */
 .main-nav a::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   bottom: -0.25rem;
-  margin: auto;
+  margin: 0 auto;
   width: 0;
   height: 2px;
   background: #c4cf6a;
@@ -151,6 +170,10 @@ body {
   margin-bottom: 1rem;
 }
 
+.hero h1 span {
+  display: block;
+}
+
 .hero-subtitle {
   opacity: 0.95;
   font-size: 1rem;
@@ -192,8 +215,14 @@ body {
   color: #3b281c;
 }
 
+.btn-full {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
 /* =======================
-   SEÇÕES
+   SEÇÕES GERAIS
 ======================= */
 .section {
   padding: 4rem 0;
@@ -207,6 +236,11 @@ body {
   background: #efe7d5;
 }
 
+.section-dark {
+  color: #fff;
+  background: radial-gradient(circle at top, #4a3223 0%, #26170f 70%);
+}
+
 .section-header-center {
   text-align: center;
   max-width: 650px;
@@ -214,7 +248,7 @@ body {
 }
 
 /* =======================
-   GRID
+   GRID GERAL
 ======================= */
 .section-grid {
   display: grid;
@@ -236,6 +270,249 @@ body {
 }
 
 /* =======================
+   PRODUTOS / CARDS 3
+======================= */
+.cards-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* =======================
+   ORÇAMENTO
+======================= */
+.orcamento-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1.1fr;
+  gap: 2rem;
+}
+
+.orcamento-form,
+.orcamento-resumo {
+  background: #fffdf7;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  border-top: 4px solid #c4cf6a;
+}
+
+.orcamento-form h3,
+.orcamento-resumo h3 {
+  margin-bottom: 1rem;
+}
+
+.orcamento-subtitle {
+  margin-top: 1.2rem;
+}
+
+.orcamento-divider {
+  height: 1px;
+  background: #e4d7c4;
+  margin: 1.4rem 0 1rem;
+}
+
+.form-row {
+  margin-bottom: 0.8rem;
+}
+
+.form-row-inline {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-field {
+  flex: 1 1 160px;
+}
+
+.form-row label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.form-row input,
+.form-row select {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d0c3ac;
+  background: #fdf7ef;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+  outline: 2px solid #c4cf6a;
+  border-color: #9fad47;
+  background: #fff;
+}
+
+.campo-nota {
+  font-size: 0.78rem;
+  margin-top: 0.25rem;
+  color: #6b5a47;
+}
+
+/* TABELA */
+.orcamento-tabela-wrapper {
+  max-height: 260px;
+  overflow-y: auto;
+  margin-bottom: 0.8rem;
+}
+
+.orcamento-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.orcamento-tabela th,
+.orcamento-tabela td {
+  padding: 0.35rem 0.45rem;
+  border-bottom: 1px solid #e4d7c4;
+}
+
+.orcamento-tabela th {
+  background: #f1e5d3;
+}
+
+.orcamento-vazio {
+  text-align: center;
+  font-style: italic;
+  color: #7b6a57;
+}
+
+.orcamento-total {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.orcamento-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.orcamento-nota {
+  font-size: 0.85rem;
+  color: #7b6a57;
+  margin-top: 0.8rem;
+}
+
+/* =======================
+   CONTATO / FORM
+======================= */
+.contact-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.contact-list li {
+  margin-bottom: 0.25rem;
+}
+
+.contact-form-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8dcc7;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form .form-group label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: #4c3b2d;
+  display: block;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 0.7rem;
+  border: 1px solid #d8cbb8;
+  background: #fdf7ef;
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+  outline: 2px solid #c4cf6a;
+  background: #fff;
+  border-color: #9fad47;
+}
+
+.contact-form button {
+  padding: 0.9rem 1.4rem;
+  border-radius: 0.7rem;
+  border: none;
+  background: linear-gradient(135deg, #c4cf6a, #9fad47);
+  color: #2b2118;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.2s ease;
+}
+
+.contact-form button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* =======================
+   GOOGLE MAPS
+======================= */
+.map-wrapper {
+  margin-top: 1.5rem;
+}
+
+.map-wrapper h3 {
+  margin-bottom: 0.4rem;
+  color: #3b281c;
+}
+
+.map-wrapper p {
+  font-size: 0.9rem;
+  color: #5c4a38;
+}
+
+.map-embed {
+  margin-top: 0.5rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.map-embed iframe {
+  width: 100%;
+  height: 260px;
+  border: 0;
+}
+
+.map-note {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: #6b5a47;
+}
+
+/* =======================
    FOOTER
 ======================= */
 .site-footer {
@@ -250,15 +527,31 @@ body {
   gap: 2rem;
 }
 
+.footer-text {
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  color: #e8dcc7;
+}
+
 .footer-links,
 .footer-contact {
   list-style: none;
   padding-left: 0;
 }
 
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 0.3rem;
+}
+
 .footer-links a {
   color: #f5ecdd;
   text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
 .footer-bottom {
@@ -266,26 +559,44 @@ body {
   padding: 1rem 0;
   border-top: 1px solid #3a2516;
   margin-top: 2rem;
+  font-size: 0.85rem;
 }
 
 /* =======================
    RESPONSIVO
 ======================= */
 @media (max-width: 900px) {
+
+  .header-content {
+    gap: 0.8rem;
+  }
+
+  .logo-img {
+    height: 80px;
+  }
+
+  .logo-title {
+    font-size: 1rem;
+  }
+
   .main-nav ul {
     display: none;
     position: absolute;
     top: 100%;
-    right: 1rem;
+    right: 0;
     background: #39451c;
     width: 220px;
     flex-direction: column;
     padding: 1rem;
-    border-radius: 0.8rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
   }
 
   .main-nav ul.nav-open {
     display: flex;
+  }
+
+  .main-nav a {
+    padding: 0.3rem 0;
   }
 
   .menu-toggle {
@@ -293,6 +604,8 @@ body {
   }
 
   .section-grid,
+  .orcamento-grid,
+  .cards-3,
   .footer-grid {
     grid-template-columns: 1fr;
   }
@@ -300,84 +613,85 @@ body {
   .hero {
     height: 65vh;
   }
-}
 
-/* ==================================================
-   MODAL CERTIFICAÇÃO ABNT / PROMAT (NOVO)
-================================================== */
-
-.modal-cert {
-  position: fixed;
-  inset: 0;
-  display: none;
-  z-index: 9999;
-}
-
-.modal-cert.active {
-  display: block;
-}
-
-.modal-cert-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.65);
-}
-
-.modal-cert-content {
-  position: relative;
-  width: min(1100px, 94vw);
-  height: min(85vh, 760px);
-  margin: 5vh auto;
-  background: #fffdf7;
-  border-radius: 1rem;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.modal-cert-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.2rem;
-  background: linear-gradient(90deg, #56622b, #39451c);
-  color: #fff;
-}
-
-.modal-cert-header h3 {
-  margin: 0;
-  font-size: 1rem;
-}
-
-.modal-cert-actions {
-  display: flex;
-  gap: 0.6rem;
-  align-items: center;
-}
-
-.modal-close {
-  background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-  border-radius: 0.6rem;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  font-size: 1.1rem;
-}
-
-.modal-cert-frame {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* Mobile modal */
-@media (max-width: 520px) {
-  .modal-cert-content {
-    width: 94vw;
-    height: 88vh;
-    margin: 4vh auto;
+  .orcamento-actions {
+    flex-direction: column;
   }
 }
+/* =======================
+   FOOTER - ÍCONES E LINKS (NOVO)
+======================= */
+
+/* Linha com ícone + texto (local e telefone) */
+.footer-contact .contact-location,
+.footer-contact .contact-phone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Botão/ícone clicável (Whats e Maps) */
+.footer-contact .wpp-icon,
+.footer-contact .map-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease, opacity 0.15s ease;
+}
+
+/* Hover dos ícones */
+.footer-contact .wpp-icon:hover,
+.footer-contact .map-icon:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Tamanho padrão dos SVG */
+.footer-contact .wpp-ico svg,
+.footer-contact .map-ico svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Cor do WhatsApp */
+.footer-contact .wpp-ico svg {
+  fill: #25D366;
+}
+
+/* Cor do ícone de localização (combina com VALE-X) */
+.footer-contact .map-ico svg {
+  fill: #c4cf6a;
+}
+
+/* Link do número (liga) e link do endereço (abre mapa) */
+.footer-contact .tel-link,
+.footer-contact .map-link {
+  color: inherit;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 10px;
+  transition: background 0.15s ease;
+}
+
+/* Hover do texto clicável */
+.footer-contact .tel-link:hover,
+.footer-contact .map-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+  .footer-contact .wpp-icon,
+  .footer-contact .map-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  .footer-contact .tel-link,
+  .footer-contact .map-link {
+    padding: 10px 10px;
+  }
+
