@@ -72,6 +72,20 @@
           assegurando a integridade com os nossos clientes, trabalhadores e parceiros.
         </li>
       </ol>
+
+      <!-- CERTIFICAÇÃO (ABNT / PROMAT) -->
+      <div class="info-card" style="margin-top:1.5rem;">
+        <h3>Certificação de Qualidade</h3>
+        <p>
+          A VALE-X Florestal segue rigorosamente as normas da <strong>ABNT</strong> e é certificada pelo
+          programa <strong>PROMAT</strong>, reforçando nosso compromisso com qualidade, durabilidade e segurança
+          na madeira tratada.
+        </p>
+        <button class="btn btn-primary" id="abrirCertificacao" type="button">
+          Ver certificação ABNT / PROMAT
+        </button>
+      </div>
+
     </div>
 
     <div class="cards-column">
@@ -140,6 +154,31 @@
   </div>
 </footer>
 
+<!-- MODAL CERTIFICAÇÃO -->
+<div class="modal-cert" id="modalCertificacao" aria-hidden="true">
+  <div class="modal-cert-overlay" id="overlayCertificacao"></div>
+
+  <div class="modal-cert-content" role="dialog" aria-modal="true" aria-label="Certificação ABNT / PROMAT">
+    <div class="modal-cert-header">
+      <h3>Certificação ABNT / PROMAT</h3>
+
+      <div class="modal-cert-actions">
+        <a class="btn btn-secondary" href="pdf/certificacao-abnt-promat.pdf" target="_blank" rel="noopener">
+          Abrir em nova aba
+        </a>
+
+        <button class="modal-close" id="fecharCertificacao" type="button" aria-label="Fechar">✕</button>
+      </div>
+    </div>
+
+    <iframe
+      src="pdf/certificacao-abnt-promat.pdf"
+      title="Certificação ABNT / PROMAT"
+      class="modal-cert-frame"
+    ></iframe>
+  </div>
+</div>
+
 <script>
   const spanAno = document.getElementById('ano-atual');
   if (spanAno) spanAno.textContent = new Date().getFullYear();
@@ -149,6 +188,36 @@
   if (toggle && nav) {
     toggle.addEventListener('click', () => nav.classList.toggle('nav-open'));
   }
+
+  // Modal Certificação
+  const btnAbrirCert = document.getElementById('abrirCertificacao');
+  const modalCert = document.getElementById('modalCertificacao');
+  const btnFecharCert = document.getElementById('fecharCertificacao');
+  const overlayCert = document.getElementById('overlayCertificacao');
+
+  function abrirModalCertificacao() {
+    if (!modalCert) return;
+    modalCert.classList.add('active');
+    modalCert.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function fecharModalCertificacao() {
+    if (!modalCert) return;
+    modalCert.classList.remove('active');
+    modalCert.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  if (btnAbrirCert) btnAbrirCert.addEventListener('click', abrirModalCertificacao);
+  if (btnFecharCert) btnFecharCert.addEventListener('click', fecharModalCertificacao);
+  if (overlayCert) overlayCert.addEventListener('click', fecharModalCertificacao);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalCert && modalCert.classList.contains('active')) {
+      fecharModalCertificacao();
+    }
+  });
 </script>
 
 </body>
